@@ -43,3 +43,4 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 >>>>>>> b363648ddc20dc4db5699fbbdf050891368a39b0
+.DS_Store
