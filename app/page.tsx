@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState} from "react";
 import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 export default function Home() {
   const [hovered, setHovered] = useState<string | null>(null);
@@ -20,11 +21,28 @@ export default function Home() {
     if (locked) return;
     setLocked(true);
     setHovered(section);
-    
+
     setTimeout(() => {
       router.push(href);
     }, 500);
   };
+
+  useEffect(() => {
+    const reset = () => {
+      setHovered(null);
+      setLocked(false);
+    };
+
+    document.addEventListener("visibilitychange", () => {
+      if (document.visibilityState === "visible") {
+        reset();
+      }
+    });
+
+    return () => {
+      document.removeEventListener("visibilitychange", reset);
+    };
+  }, []);
 
   return (
     <main className="relative flex h-screen w-screen items-center justify-center bg-[#232323] text-white overflow-hidden">
