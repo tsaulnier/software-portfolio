@@ -3,9 +3,29 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState} from "react";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
   const [hovered, setHovered] = useState<string | null>(null);
+  
+  const router = useRouter();
+
+  const [locked, setLocked] = useState(false);
+  
+  const isTouch =
+    typeof window !== "undefined" &&
+    window.matchMedia("(pointer: coarse)").matches;
+
+  const handleTap = (section: "resume" | "projects" | "about", href: string) => {
+    if (locked) return;
+    setLocked(true);
+    setHovered(section);
+    
+    setTimeout(() => {
+      router.push(href);
+    }, 500);
+  };
+
   return (
     <main className="relative flex h-screen w-screen items-center justify-center bg-[#232323] text-white overflow-hidden">
       <div className="relative flex flex-col items-center justify-center">
@@ -16,6 +36,11 @@ export default function Home() {
           href="/resume"
           onMouseEnter={() => setHovered("resume")}
           onMouseLeave={() => setHovered(null)}
+          onClick={(e) => {
+            if (!isTouch) return;
+            e.preventDefault();
+            handleTap("resume", "/resume");
+          }}
           className="absolute -bottom-17 text-small font-mono font-thin tracking-widest z-20">
           RESUME
         </Link>
@@ -23,6 +48,11 @@ export default function Home() {
           href="/projects"
           onMouseEnter={() => setHovered("projects")}
           onMouseLeave={() => setHovered(null)}
+          onClick={(e) => {
+            if (!isTouch) return;
+            e.preventDefault();
+            handleTap("projects", "/projects");
+          }}
           className="absolute -bottom-25 text-med font-mono font-thin tracking-widest z-20">
           PROJECTS
         </Link>
@@ -30,6 +60,11 @@ export default function Home() {
           href="/about"
           onMouseEnter={() => setHovered("about")}
           onMouseLeave={() => setHovered(null)}
+          onClick={(e) => {
+            if (!isTouch) return;
+            e.preventDefault();
+            handleTap("about", "/about");
+          }}
           className="absolute -bottom-33 text-med font-mono font-thin tracking-widest z-20">
           ABOUT ME
         </Link> 
