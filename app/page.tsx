@@ -60,7 +60,7 @@ export default function Home() {
             handleTap("resume", "/resume");
           }}
           className="absolute -bottom-17 text-small font-mono font-thin tracking-widest z-20">
-          RESUME
+          RÉSUMÉ
         </Link>
         <Link
           href="/projects"

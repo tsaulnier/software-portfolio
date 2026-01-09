@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build:resume": "ts-node scripts/buildResume.ts"
   },
   "dependencies": {
     "next": "15.3.8",
