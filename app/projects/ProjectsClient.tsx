@@ -25,10 +25,18 @@ export default function ProjectsClient({ projects, allTags }: Props) {
     if (viewMode === "all") return projects;
 
     return projects.filter((project) => {
-      const matchesSearch =
-        searchQuery === "" ||
-        project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        project.description.toLowerCase().includes(searchQuery.toLowerCase());
+        const terms = searchQuery
+            .toLowerCase()
+            .split(/\s+/)
+            .filter(Boolean);
+
+        const matchesSearch =
+            terms.length === 0 ||
+            terms.every((term) =>
+                project.title.toLowerCase().includes(term) ||
+                project.description.toLowerCase().includes(term) ||
+                project.tags.some((tag) => tag.includes(term))
+            );
 
       const matchesTags =
         selectedTags.length === 0 ||
