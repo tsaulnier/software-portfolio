@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Mono } from 'next/font/google';
+import { IBM_Plex_Mono } from "next/font/google";
+import { ThemeProvider } from "@/components/theme-provider";
+import { Header } from "@/components/header";
 import "./globals.css";
 
 const ibmPlexMono = IBM_Plex_Mono({
@@ -16,12 +18,25 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en" className={ibmPlexMono.variable}>
-      <body className="font-mono">{children}</body>
+      <body
+        className="
+          min-h-screen font-mono
+          bg-[rgb(var(--bg))]
+          text-[rgb(var(--fg))]
+          transition-colors
+        "
+      >
+        <ThemeProvider>
+          <Header />
+          {children}
+        </ThemeProvider>
+      </body>
+
     </html>
   );
 }

@@ -38,11 +38,11 @@ export default function ProjectsClient({ projects, allTags }: Props) {
                 project.tags.some((tag) => tag.includes(term))
             );
 
-      const matchesTags =
-        selectedTags.length === 0 ||
-        (matchMode === "any"
-          ? selectedTags.some((tag) => project.tags.includes(tag))
-          : selectedTags.every((tag) => project.tags.includes(tag)));
+        const matchesTags =
+            selectedTags.length === 0 ||
+            (matchMode === "any"
+            ? selectedTags.some((tag) => project.tags.includes(tag))
+            : selectedTags.every((tag) => project.tags.includes(tag)));
 
       return matchesSearch && matchesTags;
     });
@@ -98,7 +98,7 @@ export default function ProjectsClient({ projects, allTags }: Props) {
 
 
         <input
-          placeholder="Search"
+          placeholder="Keywords (optional)"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           className="border px-2 py-1 ml-2"

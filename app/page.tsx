@@ -45,7 +45,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="relative flex h-screen w-screen items-center justify-center bg-[#232323] text-white overflow-hidden">
+    <main className="relative flex min-h-screen items-center justify-center">
       <div className="relative flex flex-col items-center justify-center">
         <h1 className="absolute -top-12 text-xl font-mono font-thin tracking-widest z-20 pointer-events-none">
           THOM SAULNIER
