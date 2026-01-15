@@ -17,8 +17,6 @@ export default function Home() {
     typeof window !== "undefined" &&
     window.matchMedia("(pointer: coarse)").matches;
 
-  const isDarkMode = 0;
-
   const handleTap = (section: "resume" | "projects" | "about", href: string) => {
     if (locked) return;
     setLocked(true);
