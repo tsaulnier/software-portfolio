@@ -17,6 +17,8 @@ export default function Home() {
     typeof window !== "undefined" &&
     window.matchMedia("(pointer: coarse)").matches;
 
+  const isDarkMode = 0;
+
   const handleTap = (section: "resume" | "projects" | "about", href: string) => {
     if (locked) return;
     setLocked(true);
@@ -92,13 +94,15 @@ export default function Home() {
           alt="thom"
           width={192}
           height={192}
-          className="rounded-full border border-white z-10"
           priority
+          className=" rounded-full border z-10"
+          style={{ borderColor: "var(--outline-color"}}
         />
       </div>
       <div
-        className="absolute w-[600px] h-[600px] rounded-full border border-white/50 transition-all duration-300 pointer-events-none z-0"
+        className="absolute w-[600px] h-[600px] rounded-full border transition-all duration-300 pointer-events-none z-0"
         style={{
+          borderColor: "var(--arc-color)",
           top: "50%",
           left: "50%",
           transform: "translate(-50%, -50%)",
@@ -107,8 +111,9 @@ export default function Home() {
         }}
       />
       <div
-        className="absolute w-[500px] h-[500px] rounded-full border border-white/50 transition-all duration-300 pointer-events-none z-0"
+        className="absolute w-[500px] h-[500px] rounded-full border transition-all duration-300 pointer-events-none z-0"
         style={{
+          borderColor: "var(--arc-color)",
           top: "50%",
           left: "50%",
           transform: "translate(-50%, -50%)",
@@ -117,8 +122,9 @@ export default function Home() {
         }}
       />
       <div
-        className="absolute w-[400px] h-[400px] rounded-full border border-white/50 transition-all duration-300 pointer-events-none z-0"
+        className="absolute w-[400px] h-[400px] rounded-full border transition-all duration-300 pointer-events-none z-0"
         style={{
+          borderColor: "var(--arc-color)",
           top: "50%",
           left: "50%",
           transform: "translate(-50%, -50%)",
@@ -127,8 +133,9 @@ export default function Home() {
         }}
       />
       <div
-        className="absolute w-[260px] h-[260px] rounded-full border border-white/50 opacity-50 transition-all duration-300 pointer-events-none z-0"
+        className="absolute w-[260px] h-[260px] rounded-full border transition-all duration-300 pointer-events-none z-0"
         style={{
+          borderColor: "var(--arc-color)",
           top: "50%",
           left: "50%",
           transform: "translate(-50%, -50%)",

@@ -18,7 +18,15 @@ export function Header() {
   const dark = theme === "dark";
 
   return (
-    <header className="fixed top-4 right-4 z-50">
+    <header className="
+      fixed
+      top-4
+      right-4
+      z-50
+      max-w-[100vw]
+      overflow-hidden
+      pointer-events-auto
+      ">
       <label className="relative inline-flex items-center cursor-pointer">
         <input
           type="checkbox"

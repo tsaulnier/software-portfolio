@@ -3,11 +3,15 @@
 :root {
   --background: #232323;
   --foreground: #ffffff;
+  --arc-color: rgba(0,0,0, 0.85);
+  --outline-color: rgba(0, 0, 0, 0.85);
 }
 
 .dark {
   --bg:23 23 23;
   --fg: 255 255 255;
+  --arc-color: rgba(255, 255, 255, 0.85);
+  --outline-color: rgba(255, 255, 255, 0.85);
 }
 
 html:not(.dark) {
