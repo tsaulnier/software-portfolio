@@ -94,9 +94,6 @@ export default function ProjectsClient({ projects, allTags }: Props) {
             FILTER
         </span>
 
-
-
-
         <input
           placeholder="Keywords (optional)"
           value={searchQuery}

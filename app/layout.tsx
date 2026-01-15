@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Mono } from "next/font/google";
-import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeProvider } from "@/components/ThemeProvider";
 import { Header } from "@/components/header";
 import "./globals.css";
 
@@ -22,21 +22,33 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={ibmPlexMono.variable}>
-      <body
-        className="
-          min-h-screen font-mono
-          bg-[rgb(var(--bg))]
-          text-[rgb(var(--fg))]
-          transition-colors
-        "
-      >
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+(function () {
+  try {
+    const theme = localStorage.getItem("theme");
+    if (
+      theme === "dark" ||
+      (!theme && window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
+      document.documentElement.classList.add("dark");
+    }
+  } catch (_) {}
+})();
+            `,
+          }}
+        />
+      </head>
+      <body className="min-h-screen font-mono bg-[rgb(var(--bg))] text-[rgb(var(--fg))]">
         <ThemeProvider>
           <Header />
           {children}
         </ThemeProvider>
       </body>
-
     </html>
   );
 }
+
