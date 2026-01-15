@@ -44,7 +44,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="min-h-screen font-mono bg-[rgb(var(--bg))] text-[rgb(var(--fg))]">
+      <body className="min-h-screen overflow-x-hidden font-mono bg-[rgb(var(--bg))] text-[rgb(var(--fg))]">
         <ThemeProvider>
           <Header />
           {children}

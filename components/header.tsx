@@ -21,12 +21,16 @@ export function Header() {
     <header className="
       fixed
       top-4
-      right-4
+      right-[env(safe-area-inset-right)]
       z-50
       max-w-[100vw]
       overflow-hidden
       pointer-events-auto
-      ">
+      "
+      style={{
+        marginRight: "1rem",
+      }}
+      >
       <label className="relative inline-flex items-center cursor-pointer">
         <input
           type="checkbox"
