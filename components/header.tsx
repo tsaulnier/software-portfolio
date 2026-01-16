@@ -20,11 +20,12 @@ export function Header() {
   return (
     <header className="
       fixed
-      top-4
-      right-[env(safe-area-inset-right)]
+      top-3
+      inset-x-0
       z-50
-      max-w-[100vw]
-      overflow-hidden
+      flex
+      justify-end
+      px-4
       pointer-events-auto
       "
       style={{

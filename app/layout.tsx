@@ -12,6 +12,11 @@ const ibmPlexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 1,
+  },
   title: "Portfolio",
   description: "Thom Saulnier's portfolio website.",
 };

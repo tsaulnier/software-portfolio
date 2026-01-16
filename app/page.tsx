@@ -97,49 +97,76 @@ export default function Home() {
           style={{ borderColor: "var(--outline-color"}}
         />
       </div>
-      <div
-        className="absolute w-[600px] h-[600px] rounded-full border transition-all duration-300 pointer-events-none z-0"
-        style={{
-          borderColor: "var(--arc-color)",
-          top: "50%",
-          left: "50%",
-          transform: "translate(-50%, -50%)",
-          opacity: hovered === "about" ? 0.8 : 0.2,
-          clipPath: "polygon(0% 0%, 100% 0%, 100% 90%, 0% 90%)"
-        }}
-      />
-      <div
-        className="absolute w-[500px] h-[500px] rounded-full border transition-all duration-300 pointer-events-none z-0"
-        style={{
-          borderColor: "var(--arc-color)",
-          top: "50%",
-          left: "50%",
-          transform: "translate(-50%, -50%)",
-          opacity: hovered === "projects" ? 0.8 : 0.2,
-          clipPath: "polygon(0% 0%, 100% 0%, 100% 90%, 0% 90%)"
-        }}
-      />
-      <div
-        className="absolute w-[400px] h-[400px] rounded-full border transition-all duration-300 pointer-events-none z-0"
-        style={{
-          borderColor: "var(--arc-color)",
-          top: "50%",
-          left: "50%",
-          transform: "translate(-50%, -50%)",
-          opacity: hovered === "resume" ? 0.8 : 0.2,
-          clipPath: "polygon(0% 0%, 100% 0%, 100% 90%, 0% 90%)"
-        }}
-      />
-      <div
-        className="absolute w-[260px] h-[260px] rounded-full border transition-all duration-300 pointer-events-none z-0"
-        style={{
-          borderColor: "var(--arc-color)",
-          top: "50%",
-          left: "50%",
-          transform: "translate(-50%, -50%)",
-          clipPath: "polygon(0% 20%, 100% 20%, 100% 100%, 0% 100%)"
-        }}
-      />
+      {/* arcs wrapper – does not affect layout */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* ABOUT */}
+        <div
+          className="
+            absolute left-1/2 top-1/2
+            -translate-x-1/2 -translate-y-1/2
+            w-[600px] h-[600px]
+            rounded-full border
+            transition-[opacity,border-color] duration-300
+            z-0
+          "
+          style={{
+            borderColor: "var(--arc-color)",
+            opacity: hovered === "about" ? 0.8 : 0.2,
+            clipPath: "polygon(0% 0%, 100% 0%, 100% 90%, 0% 90%)",
+          }}
+        />
+
+        {/* PROJECTS */}
+        <div
+          className="
+            absolute left-1/2 top-1/2
+            -translate-x-1/2 -translate-y-1/2
+            w-[500px] h-[500px]
+            rounded-full border
+            transition-[opacity,border-color] duration-300
+            z-0
+          "
+          style={{
+            borderColor: "var(--arc-color)",
+            opacity: hovered === "projects" ? 0.8 : 0.2,
+            clipPath: "polygon(0% 0%, 100% 0%, 100% 90%, 0% 90%)",
+          }}
+        />
+
+        {/* RESUME */}
+        <div
+          className="
+            absolute left-1/2 top-1/2
+            -translate-x-1/2 -translate-y-1/2
+            w-[400px] h-[400px]
+            rounded-full border
+            transition-[opacity,border-color] duration-300
+            z-0
+          "
+          style={{
+            borderColor: "var(--arc-color)",
+            opacity: hovered === "resume" ? 0.8 : 0.2,
+            clipPath: "polygon(0% 0%, 100% 0%, 100% 90%, 0% 90%)",
+          }}
+        />
+
+        {/* INNER ARC (always visible) */}
+        <div
+          className="
+            absolute left-1/2 top-1/2
+            -translate-x-1/2 -translate-y-1/2
+            w-[260px] h-[260px]
+            rounded-full border
+            transition-[border-color] duration-300
+            z-0
+          "
+          style={{
+            borderColor: "var(--arc-color)",
+            clipPath: "polygon(0% 20%, 100% 20%, 100% 100%, 0% 100%)",
+          }}
+        />
+      </div>
+
     </main>
   );
 }
