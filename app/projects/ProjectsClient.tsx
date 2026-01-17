@@ -21,6 +21,8 @@ export default function ProjectsClient({ projects, allTags }: Props) {
   const [searchQuery, setSearchQuery] = useState("");
   const [viewMode, setViewMode] = useState<"all" | "filter">("all");
 
+  const MAX_VISIBLE_TAGS = 4;
+
   const filteredProjects = useMemo(() => {
     if (viewMode === "all") return projects;
 
@@ -149,13 +151,23 @@ export default function ProjectsClient({ projects, allTags }: Props) {
             <div className="font-medium">{project.title}</div>
             <p className="text-sm opacity-70">{project.description}</p>
 
-            <div className="flex gap-2 mt-2 text-xs">
-              {project.tags.map((tag) => (
-                <span key={tag} className="border px-2 py-0.5">
+            <div className="flex flex-wrap gap-2 mt-2 text-xs">
+              {project.tags.slice(0, MAX_VISIBLE_TAGS).map((tag) => (
+                <span
+                  key={tag}
+                  className="border px-2 py-0.5 whitespace-nowrap"
+                >
                   {tag}
                 </span>
               ))}
+
+              {project.tags.length > MAX_VISIBLE_TAGS && (
+                <span className="border px-2 py-0.5 opacity-60">
+                  …
+                </span>
+              )}
             </div>
+
           </div>
         ))}
       </div>
