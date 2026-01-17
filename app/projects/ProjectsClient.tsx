@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import Link from "next/link";
 import { ProjectDialog } from "./ProjectDialog";
 import { Project } from "@/types/project";
 
