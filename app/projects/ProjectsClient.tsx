@@ -145,9 +145,7 @@ export default function ProjectsClient({ projects, allTags }: Props) {
               Match <strong>all</strong> tags
             </label>
           </div>
-          <input className="flex items-center gap-3 border px-2 py-1
-          placeholder:text-neutral-500
-          dark:placeholder:text-neutral-100"
+          <input className="flex items-center gap-3 border px-2 py-1 placeholder:text-neutral-500"
               placeholder="Keywords (optional)"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
