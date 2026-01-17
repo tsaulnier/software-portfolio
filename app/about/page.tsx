@@ -4,7 +4,9 @@ export default function About(){
 
 return (
     <main>
-        ABOUT   
+        <div className="pt-13">
+            ABOUT
+        </div>
     </main>
     )
 }

@@ -56,13 +56,9 @@ export default function ProjectsClient({ projects, allTags }: Props) {
 
   return (
     <>
-      {/* Back */}
-      <nav style={{ padding: "0.75rem" }}>
-        <Link href="/">← BACK</Link>
-      </nav>
 
       {/* Title */}
-      <h1 className="text-3xl font-semibold">Projects</h1>
+      <h1 className="text-3xl font-semibold pt-10">Projects</h1>
 
       {/* Top controls */}
       
