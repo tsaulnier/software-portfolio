@@ -1,0 +1,71 @@
+{
+  "name": "Thom Saulnier",
+  "contact": [
+    "+1 (579) 421-0878",
+    "Colchester, Vermont, USA",
+    {
+      "label": "Email",
+      "text": "thomas.leslie.saulnier@gmail.com",
+      "href": "mailto:thomas.leslie.saulnier@gmail.com"
+    },
+    {
+      "label": "LinkedIn",
+      "text": "linkedin.com/in/thom-saulnier",
+      "href": "https://linkedin.com/in/thom-saulnier"
+    },
+    {
+      "label": "GitHub",
+      "text": "github.com/tsaulnier",
+      "href": "https://github.com/tsaulnier"
+    }
+  ],
+  "sections": [
+    {
+      "title": "Objective",
+      "type": "paragraph",
+      "content": "I'm a newly-graduated software engineer highly motivated to begin work in a challenging environment. A great employer should provide opportunities for growth, and I'm seeking to sharpen a diverse programming skillset and apply this to efficiently solve problems to that end. My experience in leadership positions has given me valuable insights into team roles and how they can be recognized to achieve shared goals, giving me the clarity required to be a competitive asset."
+    },
+    {
+      "title": "Education",
+      "type": "entries",
+      "entries": [
+        {
+          "title": "Bachelor of Science, Software Engineering",
+          "right": "Vermont Technical College · 2019–2023",
+          "note": "Complete"
+        },
+        {
+          "title": "Bachelor of Science, Physics & Mathematics",
+          "right": "McGill University · 2013–2016",
+          "note": "3 years completed"
+        }
+      ]
+    },
+    {
+      "title": "Experience",
+      "type": "experience",
+      "items": [
+        {
+          "role": "IT Logistics Technician",
+          "dates": "October 2022 - Present",
+          "company": "Health Care Relocations",
+          "location": "Peterborough, Ontario",
+          "bullets": [
+            "Traveled to medical facilities across North America to facilitate equipment relocation to new sites",
+            "Interfaced with local teams to integrate large-scale IT systems"
+          ]
+        },
+        {
+          "role": "Coding Camp Mentor",
+          "dates": "June 2022 - July 2022",
+          "company": "Vermont Technical College",
+          "location": "Williston, Vermont",
+          "bullets": [
+            "Planned and taught programming classes to high school students",
+            "Taught useful design patterns and organized hands-on projects"
+          ]
+        }
+      ]
+    }
+  ]
+}

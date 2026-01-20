@@ -1,20 +1,24 @@
+import type { Metadata } from "next";
+
+import ResumePage from "./components/ResumePage";
+import rawResumeJson from "../resume/content/resume.json";
+import { normalizeResume } from "./lib/normalizeResume";
+import { RawResumeData } from "./types/resume.raw";
+
+const rawResume = rawResumeJson as unknown as RawResumeData
+const resume = normalizeResume(rawResume);
+
+export const metadata: Metadata = {
+  title: "Resume | Thom Saulnier",
+  description: "Resume of Thom Saulnier, Software Engineer",
+};
+
 export default function Resume() {
   return (
     <div className="pt-13">
-      <main style={{ height: "100vh", width: "100%" }}>
-
-        <iframe
-          src="/resume/resume.pdf"
-          title="Resume"
-          style={{
-            width: "100%",
-            height: "calc(100vh - 3rem)",
-            border: "none",
-            opacity: "100%",
-          }}
-        />
+      <main className="resume-route">
+        <ResumePage data={resume} />
       </main>
     </div>
   );
 }
-

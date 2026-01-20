@@ -1,0 +1,127 @@
+.resumePage {
+  width: 8.5in;
+  min-height: 11in;
+  padding: 0.4in;
+  margin: 0 auto;
+  font-size: 11pt;
+  line-height: 1.25;
+}
+
+.resumeHeader {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.resumeHeaderName {
+  font-size: 18pt; /* roughly \LARGE */
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.resumeHeaderContact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  justify-content: center;
+}
+
+.contactText {
+  /* optional styling for plain text lines like phone/location */
+}
+
+.contactLink {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.resumeSection {
+  margin-top: 1.25em;
+}
+
+.resumeSectionTitle {
+  font-size: 11pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 0.3em;
+}
+
+.resumeSectionDivider {
+  border: none;
+  border-top: 1px solid currentColor;
+  margin-bottom: 0.6em;
+}
+
+.resumeSectionContent {
+  /* optional spacing or styling for the section body */
+}
+
+.experienceItem {
+  margin-bottom: 1em;
+}
+
+.experienceHeader {
+  display: grid;
+  grid-template-columns: 1fr auto; /* role left, dates right */
+  gap: 1em;
+  font-weight: 600;
+}
+
+.roleHeader {
+  /* optional: style role text */
+}
+
+.experienceDates {
+  font-style: italic;
+  justify-self: end;
+}
+
+.experienceCompany {
+  font-weight: 500;
+  margin-top: 0.2em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25em;
+}
+
+.orgHeader {
+  font-weight: 600;
+}
+
+.experienceLocation {
+  font-style: italic;
+}
+
+.experienceBullets {
+  margin-top: 0.25em;
+  padding-left: 1em;
+}
+
+.experienceBullets li {
+  margin-bottom: 0.2em;
+}
+
+.paragraph {
+  margin-bottom: 0.8em;
+}
+
+.entry {
+  margin-bottom: 0.8em;
+}
+
+.entryHeader {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1em;
+  font-weight: 600;
+}
+
+.entryRight {
+  justify-self: end;
+}
+
+.entryNote {
+  margin-left: 0.25em;
+  font-style: italic;
+  font-size: 0.95em;
+}
