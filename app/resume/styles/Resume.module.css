@@ -152,8 +152,14 @@
   }
 }
 
-@media (min-width: 640px) {
+@media (max-width: 640px) {
+  .entryHeader {
+    grid-template-columns: 1fr;
+  }
+
   .entryRight {
-    white-space: nowrap;
+    justify-self: start;
+    margin-top: 0.25em;
   }
 }
+
