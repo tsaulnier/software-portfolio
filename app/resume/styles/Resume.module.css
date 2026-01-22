@@ -192,13 +192,21 @@
 }
 
 .educationSection .entryRight {
-  grid-column: 2;
-  grid-row: 1;                /* School stays top-right */
-  justify-self: start;         /* slight left alignment for balance */
-  padding-left: 0.25em;       /* subtle spacing from left column */
-  white-space: normal;
-  overflow-wrap: anywhere;
+  display: flex;
+  flex-direction: column;
+  justify-self: start;
 }
+
+.educationSection .entryRight .school {
+  font-weight: 500;
+}
+
+.educationSection .entryRight .year {
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 0.1em;
+}
+
 
 .educationSection .entryNote {
   grid-column: 2;              /* Year under school */
