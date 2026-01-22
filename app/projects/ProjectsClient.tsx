@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from "react";
 import { ProjectDialog } from "./ProjectDialog";
-import { Project } from "@/types/project";
+import { Project } from "@/app/projects/types/project";
 
 type Props = {
   projects: Project[];

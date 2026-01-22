@@ -1,4 +1,4 @@
-import { Project } from "@/types/project";
+import { Project } from "@/app/projects/types/project";
 
 type ProjectDialogProps = {
   project: Project;
