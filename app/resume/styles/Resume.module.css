@@ -1,6 +1,9 @@
+/* ==========================
+   Root Resume Container
+   ========================== */
 .resumePage {
   width: 100%;
-  max-width: 850px;
+  max-width: 850px;        /* screen-friendly width */
   padding: 1rem;
   margin: 0 auto;
 
@@ -11,7 +14,9 @@
   overflow-x: hidden;
 }
 
-
+/* ==========================
+   Header
+   ========================== */
 .resumeHeader {
   text-align: center;
   margin-bottom: 1em;
@@ -40,6 +45,9 @@
   text-decoration: underline;
 }
 
+/* ==========================
+   Sections
+   ========================== */
 .resumeSection {
   margin-top: 1.25em;
 }
@@ -61,6 +69,9 @@
   /* optional spacing or styling for the section body */
 }
 
+/* ==========================
+   Entries / Experience
+   ========================== */
 .experienceItem {
   margin-bottom: 1em;
 }
@@ -106,15 +117,20 @@
   margin-bottom: 0.2em;
 }
 
+/* ==========================
+   Paragraphs
+   ========================== */
 .paragraph {
   margin-bottom: 0.8em;
 }
 
+/* ==========================
+   Generic Entries
+   ========================== */
 .entry {
   margin-bottom: 0.8em;
-  min-width: 0;
+  min-width: 0; /* prevents flex/grid overflow */
 }
-
 
 .entryHeader {
   display: grid;
@@ -125,7 +141,6 @@
   min-width: 0;
 }
 
-
 .entryRight {
   justify-self: end;
   text-align: right;
@@ -134,13 +149,15 @@
   overflow-wrap: anywhere;
 }
 
-
 .entryNote {
   margin-left: 0.25em;
   font-style: italic;
   font-size: 0.95em;
 }
 
+/* ==========================
+   Print Rules
+   ========================== */
 @media print {
   .resumePage {
     width: 8.5in;
@@ -152,6 +169,9 @@
   }
 }
 
+/* ==========================
+   Mobile Responsive
+   ========================== */
 @media (max-width: 640px) {
   .entryHeader {
     grid-template-columns: 1fr;
@@ -161,5 +181,31 @@
     justify-self: start;
     margin-top: 0.25em;
   }
+}
+
+.educationSection .entryHeader {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto; /* left: degree, right: school */
+  grid-template-rows: auto auto;              /* two rows: school on top, year below */
+  row-gap: 0.1em;                             /* small spacing between school and year */
+  align-items: start;                          /* align items to top of grid cells */
+}
+
+.educationSection .entryRight {
+  grid-column: 2;
+  grid-row: 1;                /* School stays top-right */
+  justify-self: start;         /* slight left alignment for balance */
+  padding-left: 0.25em;       /* subtle spacing from left column */
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.educationSection .entryNote {
+  grid-column: 2;              /* Year under school */
+  grid-row: 2;
+  justify-self: start;          /* indent slightly under school */
+  margin-top: 0.15em;          /* small vertical gap */
+  font-size: 0.9em;            /* slightly smaller than school text */
+  color: #555;                  /* subtle muted color for year */
 }
 
