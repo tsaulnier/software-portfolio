@@ -16,43 +16,30 @@ export default function ResumePage({ data }: ResumePageProps) {
         return <p className={styles.paragraph}>{section.content}</p>;
 
       case "entries":
-        return section.entries.map((e, i) => {
-          const isEducation = section.title === "Education";
+        return section.entries.map((e, i) => (
+          <div key={i} className={styles.entry}>
+            <div className={styles.entryHeader}>
+              {/* LEFT COLUMN */}
+              <div className={styles.entryLeft}>
+                <strong className={styles.entryTitle}>{e.title}</strong>
 
-          let school = "";
-          let year = "";
-
-          if (isEducation && e.right) {
-            const parts = e.right.split("·").map((s) => s.trim());
-            school = parts[0] || "";
-            year = parts[1] || "";
-          }
-
-          return (
-            <div key={i} className={styles.entry}>
-              <div className={styles.entryHeader}>
-                {/* Degree on the left */}
-                <strong>{e.title}</strong>
-
-                {/* Right column */}
-                {isEducation ? (
-                  <span className={styles.entryRight}>
-                    {school && <span className="school">{school}</span>}
-                    {year && <span className="year">{year}</span>}
-                  </span>
-                ) : (
-                  e.right && <span className={styles.entryRight}>{e.right}</span>
+                {e.institution && (
+                  <div className={styles.entrySub}>{e.institution}</div>
                 )}
               </div>
 
-              {/* Note below the header, for all entries */}
-              {e.note && <div className={styles.entryNote}>{e.note}</div>}
+              {/* RIGHT COLUMN — dates only */}
+              {e.right && (
+                <div className={styles.entryRight}>{e.right}</div>
+              )}
             </div>
-          );
-        });
 
-
-
+            {/* Tertiary info */}
+            {e.note && (
+              <div className={styles.entryNote}>{e.note}</div>
+            )}
+          </div>
+        ));
 
       case "experience":
         return section.items.map((item, i) => (

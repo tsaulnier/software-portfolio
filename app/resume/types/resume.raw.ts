@@ -22,6 +22,7 @@ export type RawSection =
       title: string;
       entries: {
         title: string;
+        institution?: string;
         right?: string;
         note?: string;
       }[];

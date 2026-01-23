@@ -31,12 +31,14 @@
       "entries": [
         {
           "title": "Bachelor of Science, Software Engineering",
-          "right": "Vermont Technical College · 2019–2023",
+          "institution": "Vermont Technical College",
+          "right":"2019–2023",
           "note": "Complete"
         },
         {
           "title": "Bachelor of Science, Physics & Mathematics",
-          "right": "McGill University · 2013–2016",
+          "institution": "McGill University",
+          "right":"2013–2016",
           "note": "3 years completed"
         }
       ]

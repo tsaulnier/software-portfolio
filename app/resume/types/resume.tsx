@@ -65,6 +65,7 @@ export type EntriesSection = {
 
 export type Entry = {
   title: string;
+  institution?: string;
   right?: string;
   note?: string;
 };
