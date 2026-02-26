@@ -66,6 +66,15 @@
             "Planned and taught programming classes to high school students",
             "Taught useful design patterns and organized hands-on projects"
           ]
+        },
+        {
+          "role": "Bank Teller",
+          "dates": "May 2017 -  August 2019",
+          "company": "TD Bank",
+          "location": "South Burlington, Vermont",
+          "bullets": [
+            "Worked closely with clients to manage their finacial needs.",
+          ]
         }
       ]
     }
