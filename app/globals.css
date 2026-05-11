@@ -51,6 +51,7 @@ html:not(.dark) {
   --ui-text: 10 10 10;
   --ui-muted: 115 115 115;
   --ui-border: 220 220 220;
+  --ui-hover: 226 225 215;
 }
 
 .dark {
@@ -59,4 +60,5 @@ html:not(.dark) {
   --ui-text: 250 250 250;
   --ui-muted: 161 161 170;
   --ui-border: 63 63 70;
+  --ui-hover: 50 50 50;
 }

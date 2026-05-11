@@ -81,7 +81,7 @@ export function Header() {
               peer-checked:translate-x-7
             "
           >
-            {dark ? "☾" : "☀︎"}
+            {dark ? "☾" : "☀"}
           </div>
         </label>
       </div>

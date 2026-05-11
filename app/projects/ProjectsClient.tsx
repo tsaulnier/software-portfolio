@@ -153,7 +153,7 @@ export default function ProjectsClient({ projects, allTags }: Props) {
         {filteredProjects.map((project) => (
           <div
             key={project.id}
-            className="border p-4 cursor-pointer hover:bg-gray-50 transition-color"
+            className="border p-4 cursor-pointer hover:bg-[rgb(var(--ui-hover))] transition-color"
             onClick={() => setActiveProject(project)}
           >
             <div className="font-medium">{project.title}</div>
