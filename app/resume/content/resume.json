@@ -48,12 +48,22 @@
       "type": "experience",
       "items": [
         {
-          "role": "IT Logistics Technician",
-          "dates": "2022 - Present",
+          "role": "Project Manager",
+          "dates": "2026 - Present",
           "company": "Health Care Relocations",
           "location": "Peterborough, Ontario",
           "bullets": [
-            "Traveled to medical facilities across North America to facilitate equipment relocation to new sites",
+            "Managed the logistics for global projects in medical equipment relocation",
+            "Coordinated with medical facility adminstration to implement relocation strategies with HCR internal and local teams"
+          ]
+        },
+        {
+          "role": "Medical Equipment Logistician",
+          "dates": "2022 - 2026",
+          "company": "Health Care Relocations",
+          "location": "Peterborough, Ontario",
+          "bullets": [
+            "Traveled to medical facilities across North America and Europe to facilitate equipment relocation",
             "Interfaced with local teams to integrate large-scale IT systems"
           ]
         },
@@ -73,7 +83,7 @@
           "company": "TD Bank",
           "location": "South Burlington, Vermont",
           "bullets": [
-            "Worked closely with clients to manage their financial needs."
+            "Worked closely with clients to assist with their financial needs."
           ]
         }
       ]
